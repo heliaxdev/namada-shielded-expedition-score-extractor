@@ -1,0 +1,43 @@
+[package]
+name = "score_extractor"
+description = "Namada score extractor."
+resolver = "2"
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+readme.workspace = true
+version.workspace = true
+
+[[bin]]
+name = "score_extractor"
+path = "src/main.rs"
+
+[lib]
+name = "score_extractor"
+path = "src/lib.rs"
+
+[dependencies]
+diesel_migrations.workspace = true
+deadpool-diesel.workspace = true
+diesel.workspace = true
+tokio.workspace = true 
+tracing.workspace = true
+tracing-subscriber.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+clap.workspace = true 
+anyhow.workspace = true
+thiserror.workspace = true
+namada_governance.workspace = true
+namada_core.workspace = true
+namada_sdk.workspace = true
+borsh.workspace = true
+shared.workspace = true
+tendermint-rpc.workspace = true
+chrono.workspace = true
+either = "1.9.0"
+clap-verbosity-flag.workspace = true
+duration-str.workspace = true
+
+[build-dependencies]
+vergen = { version = "8.0.0", features = ["build", "git", "gitcl"] }
